@@ -185,7 +185,7 @@ local function search(searchString, useDescription)
         local slipItems = slips.items[v[1].Id];
         local extra = v[2].Extra;
 
-        if slipItems ~= nil then
+        if (slipItems ~= nil) then
             for i,slipItemID in ipairs(slipItems) do
                 local slipItem = resources:GetItemById(slipItemID);
                 if (find(slipItem, cleanString, useDescription)) then
